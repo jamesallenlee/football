@@ -1,0 +1,51 @@
+<!-- <div data-role="header">
+	<h1>Weekly Pool</h1>
+</div> -->
+    <div data-role="header">
+        <h1>Weekly Pool</h1>
+        <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+    </div><!-- /header -->
+<div data-role="content">
+
+
+
+<!-- CONTENT -->
+
+
+<a href="../" data-rel="back" data-ajax="false" class="ui-btn ui-shadow ui-corner-all ui-mini ui-btn-inline ui-icon-carat-l ui-btn-icon-left ui-alt-icon ui-nodisc-icon">Back</a>
+    </div><!-- /content -->
+    <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+        <ul data-role="listview">
+            <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+            <% @weeks.each do |week| %>
+    			<li><a href="#week<%= week.number %>" >Week <%= week.number %></a></li>
+    		<% end %>
+
+        </ul>
+    </div><!-- /panel -->
+
+
+
+
+<!-- <div data-role="tabs">
+    <ul data-role="listview" data-inset="true" class="tablist-left">
+      <% @weeks.each do |week| %>
+      	<li><a href="#week<%= week.number %>" >Week <%= week.number %></a></li>
+      <% end %>
+    </ul>
+
+    <% @weeks.each do |week| %>
+    	<div id="week<%= week.number %>" class="ui-body-d tablist-content">
+    		<h1><%= week.start %> - <%= week.end %></h1>
+    	</div>
+    <% end %>
+</div> -->
+
+
+<!-- FOOTER -->
+
+
+</div>
+<div data-role="footer">
+	Some text
+</div>

@@ -1,0 +1,22 @@
+<%= form_for(@week) do |f| %>
+  <% if @week.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@week.errors.count, "error") %> prohibited this week from being saved:</h2>
+
+      <ul>
+      <% @week.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+      <%= f.label :number, "Number" %>
+      <%= f.text_field :number %>
+      <%= f.label :start, "Start" %>
+      <%= f.date_select :start, :order => [:day, :month, :year] %>
+      <%= f.label :end, "End" %>
+      <%= f.date_select :end, :order => [:day, :month, :year] %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
